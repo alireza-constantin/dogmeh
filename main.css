@@ -1,0 +1,64 @@
+:root{
+    /* background colors */
+    --bg-default: #F6F6F6;
+    --bg-primary: #1CA6AB;
+    --bg-accent: #616161;
+    --bg-secondary: #E6F4F1;
+
+    /* text colors */
+    --text-default: #242424;
+    --text-accent: #616161;
+    --text-primary: #1CA6AB;
+    --text-secondary: #005C6D; 
+
+    /* font sizes */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 32px;
+    --text-2xl: 40px;
+    
+    /* utils */
+    --border-radius: 8px;
+    --border-radius-sm: 16px;
+
+    --box-shadow: 0 2px 10px rgba(0,0,0,0.15); 
+    --box-shadow-blog: 0 4px 15px rgba(0,0,0,0.1);
+    --box-shadow-other: 7px 7px 15px rgba(0,0,0,0.15);
+
+    /* button paddings */
+    --button-primary-px: 30px;
+    --button-primary-py: 7px;
+
+    --button-secondary-px: 8px;
+    --button-secondary-py: 4px;
+
+    /* icons */
+    --lg-icon-size: 32px;
+    --sm-icon-size: 24px;
+    --icon-color-default: #616161;
+    --icon-color-primary: #1CA6AB;  
+
+    /* paddings */
+    --container-max-width: 1320px;
+    --md-container-px: 20px;
+    --sm-container-px: 4px;
+}
+
+/* utils */
+.page-container {
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--sm-container-px);
+}
+
+@media(min-width: 768px){
+    .page-container {
+        padding-inline: var(--md-container-px);
+    }
+}
+
+.bg-default {
+    background-color: var(--bg-default);
+}
