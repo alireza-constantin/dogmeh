@@ -1,30 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./main.css" />
 
-    <title>DOGMEH</title>
-  </head>
-  <body class="page-container bg-default">
-    <!-- HEADER -->
-    <header>
-        <nav>
+        <title>DOGMEH</title>
+    </head>
+    <body class="container-fluid bg-default text-default">
+        <!-- HEADER -->
+        <header class="header row align-items-center">
+            <div class="col-5 flex gap-8">
+                <div class="hover-primary-svg flex header__phone">
+                    <img src="./assets/phone.svg" />
+                    <span class="text-lg">۰۹۳۰۲۵۷۳۴۲۳</span>
+                </div>
+                <nav class="">
+                    <ul class="header__secondary-nav flex gap-4">
+                        <li>
+                            <a class="hover-primary-svg">
+                                <img src="./assets/fi_heart.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover-primary-svg">
+                                <img src="./assets/basket.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover-primary-svg">
+                                <img src="./assets/user.svg" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <img class="hover-primary-svg" src="./assets/fi_search.svg" />
+                </div>
+            </div>
+            <div class="col-2 header__logo">
+                <img src="./assets/logo.png" />
+            </div>
+            <div class="col-5">
+                <div class="header__primary-nav flex gap-8">
+                    <ul class="flex gap-8">
+                        <li>
+                            <a>تماس باما</a>
+                        </li>
+                        <li>
+                            <a>درباره ما</a>
+                        </li>
+                        <li>
+                            <a>صفحه اصلی</a>
+                        </li>
+                    </ul>
+                    <div class="header__drop-down">
+                        <img src="./assets/u_angle-down.svg" />
+                        <span>دسته بندی محصولات</span>
+                        <img src="./assets/u_apps.svg" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <button class="btn btn-primary">Hello, world!</button>
+        </main>
 
-        </nav>
-    </header>
-    <main>
-        <button class="btn btn-primary">Hello, world!</button>
-    </main>
-
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-  </body>
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
