@@ -102,15 +102,15 @@
                             <div class="cat-menu">
                                 <div>
                                     <ul class="cat-menu__items">
-                                        <li class="cat-menu__item">
+                                        <li data-name="cloth" class="cat-menu__item selected">
                                             <span>مد و پوشاک</span>
                                             <image src="./assets/chevron-left.svg" />
                                         </li>
-                                        <li class="cat-menu__item">
+                                        <li data-name="bag" class="cat-menu__item">
                                             <span>کیف</span>
                                             <image src="./assets/chevron-left.svg" />
                                         </li>
-                                        <li class="cat-menu__item">
+                                        <li data-name="accessory" class="cat-menu__item">
                                             <span>اکسسوری</span>
                                             <image src="./assets/chevron-left.svg" />
                                         </li>
@@ -119,24 +119,12 @@
                                 <div class="cat-menu__options">
                                     <div class="cat-menu__options__header">
                                         <p class="text-sm">مد و پوشاک</p>
-                                        <a class="text-xs text-primary" >مشاهده همه محصولات مد و پوشاک</a>
+                                        <a class="text-xs text-primary"
+                                            >مشاهده همه محصولات مد و پوشاک</a
+                                        >
                                     </div>
                                     <div class="cat-menu-options__list text-sm">
-                                        <ul>
-                                            <li><a>مانتو</a></li>
-                                            <li>تونیک</li>
-                                            <li>شومیز</li>
-                                            <li>کت</li>
-                                            <li>دامن</li>
-                                            <li>تونیک</li>
-                                            <li>سارافون</li>
-                                            <li>شلوار</li>
-                                            <li>شال</li>
-                                            <li>پیراهن</li>
-                                            <li>کت</li>
-                                            <li>دامن</li>
-                                            <li>پانچو</li>
-                                            <li>سرهمی</li>
+                                        <ul id="category-list">
                                         </ul>
                                     </div>
                                 </div>
@@ -164,5 +152,6 @@
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
             crossorigin="anonymous"
         ></script>
+        <script src="./app.js"></script>
     </body>
 </html>
