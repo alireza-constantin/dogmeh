@@ -15,6 +15,7 @@
             integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="./base.css" />
         <link rel="stylesheet" href="./main.css" />
 
         <title>DOGMEH</title>
@@ -46,8 +47,30 @@
                         </li>
                     </ul>
                 </nav>
-                <div>
-                    <img class="hover-primary-svg" src="./assets/fi_search.svg" />
+                <div class="header__search">
+                    <a
+                        class="header__search__toggle hover-primary-svg"
+                        role="button"
+                        href="#"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                        data-offset="5,40"
+                    >
+                        <img
+                            class="header__search--search-icon"
+                            src="./assets/fi_search.svg"
+                        />
+                        <img
+                            class="header__search--close-icon"
+                            src="./assets/close.svg"
+                        />
+                    </a>
+                    <div dir="rtl" class="dropdown-menu">
+                        <div class="dropdown-menu__content">
+                            <input placeholder="محصول مورد نظر خود را جستجو کنید..." />
+                            <img src="./assets/fi_search.svg" />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-2 header__logo">
@@ -66,16 +89,68 @@
                             <a>صفحه اصلی</a>
                         </li>
                     </ul>
-                    <div class="header__drop-down">
-                        <img src="./assets/u_angle-down.svg" />
-                        <span>دسته بندی محصولات</span>
-                        <img src="./assets/u_apps.svg" />
+                    <!-- dropdown categories -->
+                    <a data-toggle="dropdown" aria-expanded="false" data-offset="0,30">
+                        <div class="header__cat-menu">
+                            <img src="./assets/u_angle-down.svg" />
+                            <span>دسته بندی محصولات</span>
+                            <img src="./assets/u_apps.svg" />
+                        </div>
+                    </a>
+                    <div dir="rtl" class="dropdown-menu dropdown-menu-right">
+                        <div class="header__cat-menu__content text-sm">
+                            <div class="cat-menu">
+                                <div>
+                                    <ul class="cat-menu__items">
+                                        <li class="cat-menu__item">
+                                            <span>مد و پوشاک</span>
+                                            <image src="./assets/chevron-left.svg" />
+                                        </li>
+                                        <li class="cat-menu__item">
+                                            <span>کیف</span>
+                                            <image src="./assets/chevron-left.svg" />
+                                        </li>
+                                        <li class="cat-menu__item">
+                                            <span>اکسسوری</span>
+                                            <image src="./assets/chevron-left.svg" />
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cat-menu__options">
+                                    <div class="cat-menu__options__header">
+                                        <p class="text-sm">مد و پوشاک</p>
+                                        <a class="text-xs text-primary" >مشاهده همه محصولات مد و پوشاک</a>
+                                    </div>
+                                    <div class="cat-menu-options__list text-sm">
+                                        <ul>
+                                            <li><a>مانتو</a></li>
+                                            <li>تونیک</li>
+                                            <li>شومیز</li>
+                                            <li>کت</li>
+                                            <li>دامن</li>
+                                            <li>تونیک</li>
+                                            <li>سارافون</li>
+                                            <li>شلوار</li>
+                                            <li>شال</li>
+                                            <li>پیراهن</li>
+                                            <li>کت</li>
+                                            <li>دامن</li>
+                                            <li>پانچو</li>
+                                            <li>سرهمی</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main>
-            <button class="btn btn-primary">Hello, world!</button>
+            <!-- hero -->
+            <div class="hero">
+                <img src="./assets/Bg1.png" />
+            </div>
         </main>
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -1,0 +1,253 @@
+:root {
+    /* background colors */
+    --bg-default: #f6f6f6;
+    --bg-primary: #1ca6ab;
+    --bg-accent: #616161;
+    --bg-secondary: #e6f4f1;
+
+    /* text colors */
+    --text-default: #616161;
+    --text-accent: #242424;
+    --text-primary: #1ca6ab;
+    --text-secondary: #005c6d;
+
+    /* font sizes */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 32px;
+    --text-2xl: 40px;
+
+    /* utils */
+    --border-radius: 8px;
+    --border-radius-sm: 16px;
+    --filter-to-primary: invert(54%) sepia(16%) saturate(2033%) hue-rotate(133deg)
+        brightness(98%) contrast(83%);
+
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    --box-shadow-blog: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-other: 7px 7px 15px rgba(0, 0, 0, 0.15);
+
+    /* button paddings */
+    --button-primary-px: 30px;
+    --button-primary-py: 7px;
+
+    --button-secondary-px: 8px;
+    --button-secondary-py: 4px;
+
+    /* icons */
+    --lg-icon-size: 32px;
+    --sm-icon-size: 24px;
+    --icon-color-default: #616161;
+    --icon-color-primary: #1ca6ab;
+
+    /* paddings */
+    /* --container-max-width: 1320px;
+    --md-container-px: 20px;
+    --sm-container-px: 4px; */
+}
+
+/* ---------------------------------------- custom classes ----------------------- */
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* utils */
+.text-default {
+    color: var(--text-default);
+}
+
+.text-accent {
+    color: var(--text-accent);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-md {
+    font-size: var(--text-md);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-2xl {
+    font-size: var(--text-2xl);
+}
+
+.bg-default {
+    background-color: var(--bg-default);
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-2 {
+    gap: 4px;
+}
+
+.gap-4 {
+    gap: 8px;
+}
+
+.gap-8 {
+    gap: 16px;
+}
+
+.hover-primary:hover {
+    color: var(--text-primary);
+}
+
+.hover-primary-svg:hover {
+    filter: invert(54%) sepia(16%) saturate(2033%) hue-rotate(133deg) brightness(98%)
+        contrast(83%);
+}
+
+body {
+    max-width: 1360px;
+}
