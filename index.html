@@ -21,111 +21,159 @@
         <title>DOGMEH</title>
     </head>
     <body class="container-fluid bg-default text-default">
-        <!-- HEADER -->
-        <header class="header row align-items-center">
-            <div class="col-5 flex gap-8">
-                <div class="hover-primary-svg flex header__phone">
-                    <img src="./assets/phone.svg" />
-                    <span class="text-lg">۰۹۳۰۲۵۷۳۴۲۳</span>
-                </div>
-                <nav class="">
-                    <ul class="header__secondary-nav flex gap-4">
-                        <li>
-                            <a class="hover-primary-svg">
-                                <img src="./assets/fi_heart.svg" />
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover-primary-svg">
-                                <img src="./assets/basket.svg" />
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover-primary-svg">
-                                <img src="./assets/user.svg" />
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__search">
-                    <a
-                        class="header__search__toggle hover-primary-svg"
-                        role="button"
-                        href="#"
-                        data-toggle="dropdown"
-                        aria-expanded="false"
-                        data-offset="5,40"
-                    >
-                        <img
-                            class="header__search--search-icon"
-                            src="./assets/fi_search.svg"
-                        />
-                        <img
-                            class="header__search--close-icon"
-                            src="./assets/close.svg"
-                        />
-                    </a>
-                    <div dir="rtl" class="dropdown-menu">
-                        <div class="dropdown-menu__content">
-                            <input placeholder="محصول مورد نظر خود را جستجو کنید..." />
-                            <img src="./assets/fi_search.svg" />
+        <div class="layer"></div>
+        <!----------------------------------------------------------- HEADER -------------------------------------->
+
+        <header class="header">
+            <!---------------------------------------------------- Desktop nav ------------------------------------>
+            <div id="lg-nav" class="lg-nav row align-items-center">
+                <!------------------------------------------------ secondary nav ---------------------------------->
+                <div class="col-5 d-flex gap-8">
+                    <div class="d-flex align-items-center">
+                        <img class="icon nav-icon" src="./assets/phone.svg" />
+                        <span class="text-lg">۰۹۳۰۲۵۷۳۴۲۳</span>
+                    </div>
+                    <nav>
+                        <ul class="d-flex gap-4 pointer">
+                            <li>
+                                <a>
+                                    <img
+                                        class="icon nav-icon icon-hover"
+                                        src="./assets/fi_heart.svg"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="position-relative">
+                                    <img
+                                        class="icon nav-icon icon-hover"
+                                        src="./assets/basket.svg"
+                                    />
+                                    <span class="cart-count">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <img
+                                        class="icon nav-icon icon-hover"
+                                        src="./assets/user.svg"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header__search">
+                        <a
+                            class="header__search__toggle"
+                            role="button"
+                            href="#"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                            data-offset="5,40"
+                        >
+                            <img
+                                class="header__search--search-icon icon nav-icon icon-hover"
+                                src="./assets/fi_search.svg"
+                            />
+                            <img
+                                class="header__search--close-icon icon nav-icon icon-hover"
+                                src="./assets/close.svg"
+                            />
+                        </a>
+                        <div dir="rtl" class="dropdown-menu">
+                            <div class="dropdown-menu__content">
+                                <input
+                                    placeholder="محصول مورد نظر خود را جستجو کنید..."
+                                />
+                                <img
+                                    src="./assets/fi_search.svg"
+                                    class="icon nav-icon icon-hover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-2 header__logo">
-                <img src="./assets/logo.png" />
-            </div>
-            <div class="col-5">
-                <div class="header__primary-nav flex gap-8">
-                    <ul class="flex gap-8">
-                        <li>
-                            <a>تماس باما</a>
-                        </li>
-                        <li>
-                            <a>درباره ما</a>
-                        </li>
-                        <li>
-                            <a>صفحه اصلی</a>
-                        </li>
-                    </ul>
-                    <!-- dropdown categories -->
-                    <a data-toggle="dropdown" aria-expanded="false" data-offset="0,30">
-                        <div class="header__cat-menu">
-                            <img src="./assets/u_angle-down.svg" />
-                            <span>دسته بندی محصولات</span>
-                            <img src="./assets/u_apps.svg" />
-                        </div>
-                    </a>
-                    <div dir="rtl" class="dropdown-menu dropdown-menu-right">
-                        <div class="header__cat-menu__content text-sm">
-                            <div class="cat-menu">
-                                <div>
-                                    <ul class="cat-menu__items">
-                                        <li data-name="cloth" class="cat-menu__item selected">
-                                            <span>مد و پوشاک</span>
-                                            <image src="./assets/chevron-left.svg" />
-                                        </li>
-                                        <li data-name="bag" class="cat-menu__item">
-                                            <span>کیف</span>
-                                            <image src="./assets/chevron-left.svg" />
-                                        </li>
-                                        <li data-name="accessory" class="cat-menu__item">
-                                            <span>اکسسوری</span>
-                                            <image src="./assets/chevron-left.svg" />
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cat-menu__options">
-                                    <div class="cat-menu__options__header">
-                                        <p class="text-sm">مد و پوشاک</p>
-                                        <a class="text-xs text-primary"
-                                            >مشاهده همه محصولات مد و پوشاک</a
-                                        >
-                                    </div>
-                                    <div class="cat-menu-options__list text-sm">
-                                        <ul id="category-list">
+
+                <!----------------------------------------- logo ----------------------------------------->
+                <div class="col-2 d-flex justify-content-center">
+                    <img src="./assets/logo.png" />
+                </div>
+
+                <!------------------------------------------- primary-nav -------------------------------->
+                <div class="col-5">
+                    <div class="d-flex justify-content-end align-items-center gap-8">
+                        <ul class="d-flex gap-8 pointer">
+                            <li class="text-hover">
+                                <a>تماس باما</a>
+                            </li>
+                            <li class="text-hover">
+                                <a>درباره ما</a>
+                            </li>
+                            <li class="text-hover">
+                                <a>صفحه اصلی</a>
+                            </li>
+                        </ul>
+
+                        <!-- dropdown categories -->
+                        <a
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                            data-offset="0,25"
+                        >
+                            <div class="header__cat-menu-btn pointer">
+                                <img
+                                    src="./assets/u_angle-down.svg"
+                                    class="icon nav-icon"
+                                />
+                                <span>دسته بندی محصولات</span>
+                                <img src="./assets/u_apps.svg" class="icon nav-icon" />
+                            </div>
+                        </a>
+                        <div dir="rtl" class="dropdown-menu dropdown-menu-right">
+                            <div class="header__cat-menu__content text-sm">
+                                <div class="d-flex p-3">
+                                    <div>
+                                        <ul class="cat-menu__items">
+                                            <li
+                                                data-name="cloth"
+                                                class="cat-menu__item selected"
+                                            >
+                                                <span>مد و پوشاک</span>
+                                                <image
+                                                    src="./assets/chevron-left.svg"
+                                                    class="icon nav-icon"
+                                                />
+                                            </li>
+                                            <li data-name="bag" class="cat-menu__item">
+                                                <span>کیف</span>
+                                                <image
+                                                    src="./assets/chevron-left.svg"
+                                                    class="icon nav-icon"
+                                                />
+                                            </li>
+                                            <li
+                                                data-name="accessory"
+                                                class="cat-menu__item"
+                                            >
+                                                <span>اکسسوری</span>
+                                                <image
+                                                    src="./assets/chevron-left.svg"
+                                                    class="icon nav-icon"
+                                                />
+                                            </li>
                                         </ul>
+                                    </div>
+                                    <div class="cat-menu__options">
+                                        <div class="cat-menu__options__header">
+                                            <p class="text-sm">مد و پوشاک</p>
+                                            <a class="text-xs text-primary"
+                                                >مشاهده همه محصولات مد و پوشاک</a
+                                            >
+                                        </div>
+                                        <div class="cat-menu-options__list text-sm">
+                                            <ul id="category-list"></ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -133,11 +181,261 @@
                     </div>
                 </div>
             </div>
+            <!----------------------------------------------------- mobile && tablet -------------------------------------->
+            <div id="md-nav" class="md-nav row align-items-center">
+                <!--------------------------------------------------secondary nav ------------------------------->
+                <div class="col-5">
+                    <nav>
+                        <ul class="d-flex gap-8 pointer">
+                            <li>
+                                <a>
+                                    <img
+                                        src="./assets/phone.svg"
+                                        class="icon nav-icon icon-hover"
+                                    />
+                                </a>
+                            </li>
+                            <li class="mobile-hide">
+                                <a>
+                                    <img
+                                        src="./assets/fi_heart.svg"
+                                        class="icon nav-icon icon-hover"
+                                    />
+                                </a>
+                            </li>
+                            <li class="mobile-hide">
+                                <a class="position-relative">
+                                    <img
+                                        class="icon nav-icon icon-hover"
+                                        src="./assets/basket.svg"
+                                    />
+                                    <span class="cart-count">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!---------------------------------------------------- logo ------------------------------------->
+                <div class="col-2 header__logo">
+                    <img src="./assets/logo.png" />
+                </div>
+                <!------------------------------------------------------primary nav ----------------------------->
+                <div class="col-5">
+                    <div class="">
+                        <nav class="">
+                            <ul class="d-flex justify-content-end gap-8">
+                                <li class="mobile-hide">
+                                    <div class="header__search">
+                                        <a
+                                            class="header__search__toggle"
+                                            role="button"
+                                            href="#"
+                                            data-toggle="dropdown"
+                                            aria-expanded="false"
+                                            data-offset="5,40"
+                                        >
+                                            <img
+                                                class="header__search--search-icon icon nav-icon icon-hover"
+                                                src="./assets/fi_search.svg"
+                                            />
+                                            <img
+                                                class="header__search--close-icon icon nav-icon icon-hover"
+                                                src="./assets/close.svg"
+                                            />
+                                        </a>
+                                        <div
+                                            dir="rtl"
+                                            class="dropdown-menu dropdown-menu-right"
+                                        >
+                                            <div class="dropdown-menu__content">
+                                                <input
+                                                    placeholder="محصول مورد نظر خود را جستجو کنید..."
+                                                />
+                                                <img
+                                                    class="icon nav-icon"
+                                                    src="./assets/fi_search.svg"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="pointer mobile-hide">
+                                    <image
+                                        src="./assets/user.svg"
+                                        class="icon nav-icon icon-hover"
+                                    />
+                                </li>
+                                <li class="pointer">
+                                    <image
+                                        src="./assets/hamburger.svg"
+                                        class="icon nav-icon icon-hover sidebar-btn"
+                                    />
+                                </li>
+                            </ul>
+                            <!-------------------------- sidebar -------------------------------------->
+                            <div dir="rtl" class="sidebar">
+                                <div
+                                    id="sidebar-close-btn"
+                                    class="align-self-end pointer"
+                                >
+                                    <img src="./assets/close.svg" />
+                                </div>
+                                <div id="mb-category-list" class="mt-5">
+                                    <div id="mb-category-menu">
+                                        <div class="d-flex gap-8">
+                                            <div class="sidebar__btn">
+                                                <span>ورود | ثبت نام</span>
+                                                <img
+                                                    class="pr-1"
+                                                    src="./assets/user.svg"
+                                                />
+                                            </div>
+                                            <div class="sidebar__btn">
+                                                <span>علاقه مندی ها</span>
+                                                <img
+                                                    class="pr-1"
+                                                    src="./assets/fi_heart.svg"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="mt-5 text-accent">
+                                            <div class="sidebar__cat-btn">
+                                                <img src="./assets/hamburger.svg" />
+                                                <span class="pr-1">فهرست</span>
+                                            </div>
+                                            <div class="sidebar__menu-cat">
+                                                <ul class="sidebar__menu-items pointer">
+                                                    <li
+                                                        data-name="cloth"
+                                                        id="menu-item"
+                                                        class="sidebar__menu-item text-hover icon-hover"
+                                                    >
+                                                        <span>مد و پوشاک</span>
+                                                        <image
+                                                            style="
+                                                                width: 16px;
+                                                                height: 16px;
+                                                            "
+                                                            src="./assets/chevron-left.svg"
+                                                            class="icon nav-icon"
+                                                        />
+                                                    </li>
+                                                    <li
+                                                        data-name="bag"
+                                                        id="menu-item"
+                                                        class="sidebar__menu-item text-hover icon-hover"
+                                                    >
+                                                        <span>کیف</span>
+                                                        <image
+                                                            style="
+                                                                width: 16px;
+                                                                height: 16px;
+                                                            "
+                                                            src="./assets/chevron-left.svg"
+                                                            class="icon nav-icon"
+                                                        />
+                                                    </li>
+                                                    <li
+                                                        data-name="accessory"
+                                                        id="menu-item"
+                                                        class="sidebar__menu-item text-hover icon-hover"
+                                                    >
+                                                        <span>اکسسوری</span>
+                                                        <image
+                                                            style="
+                                                                width: 16px;
+                                                                height: 16px;
+                                                            "
+                                                            src="./assets/chevron-left.svg"
+                                                            class="icon nav-icon"
+                                                        />
+                                                    </li>
+                                                    <li
+                                                        class="sidebar__menu-item text-hover"
+                                                    >
+                                                        درباره ما
+                                                    </li>
+                                                    <li
+                                                        class="sidebar__menu-item text-hover"
+                                                    >
+                                                        تماس باما
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------- mobile app bar ----------------------------------------->
+            <div class="app-bar shadow-lg">
+                <div
+                    class="position-relative h-100 d-flex px-5 py-2 align-items-center justify-content-between"
+                >
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center"
+                    >
+                        <img src="./assets/fi_search.svg" class="icon" />
+                        <p class="text-sm">جستجو</p>
+                    </div>
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center"
+                    >
+                        <img
+                            style="width: 32px; height: 32px"
+                            src="./assets/u_apps.svg"
+                        />
+                        <p class="text-sm">دسته بندی</p>
+                    </div>
+                    <div class="app-bar__basket">
+                        <div class="position-relative">
+                            <img
+                                class=""
+                                src="./assets/basket.svg"
+                            />
+                            <span class="cart-count">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>
-            <!-- hero -->
+            <!------------------------------------------------------- hero ---------------------------------------->
             <div class="hero">
                 <img src="./assets/Bg1.png" />
+            </div>
+            <div class="pt-5">
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
+                <p>test scroll</p>
             </div>
         </main>
 

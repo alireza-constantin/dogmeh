@@ -1,7 +1,4 @@
-const options = document.querySelectorAll(".cat-menu__item")
-const categoryList = document.getElementById("category-list")
-
-const categories = {
+const CATEGORIES = {
     cloth: [
         "مانتو",
         "تونیک",
@@ -38,18 +35,19 @@ const categories = {
     ],
 }
 
-function populateCategoryList(categoryName) {
-    categoryList.innerHTML = ""
-    categories[categoryName].forEach((category) => {
-        const list = document.createElement("li")
-        list.textContent = category
-        categoryList.appendChild(list)
-    })
+const catToFullNameMap = {
+    cloth: "مد و پوشاک",
+    bag: "کیف",
+    accessory: "اکسسوری",
 }
 
-populateCategoryList("cloth")
+// -------------------------------- desktop category menu ---------------------------------------
+const options = $(".cat-menu__item")
+const categoryList = $("#category-list")
 
-const acc = new Proxy(
+console.log(options);
+
+const selectMenuOption = new Proxy(
     {
         selected: null,
     },
@@ -70,15 +68,67 @@ const acc = new Proxy(
     }
 )
 
-for (let option of options) {
-    option.addEventListener(
-        "mouseover",
-        () => {
-            categoryList.innerHTML = ""
-            const categoryName = option.getAttribute("data-name") || "cloth"
-            acc.selected = option;
-            populateCategoryList(categoryName)
-        },
-        { capture: true }
-    )
+function populateCategoryList(categoryName) {
+    categoryList.empty()
+    $.each(CATEGORIES[categoryName], function (_, category) {
+        const listItem = $("<li>").text(category)
+        categoryList.append(listItem)
+    })
 }
+
+populateCategoryList("cloth")
+
+options.on("mouseover", function () {
+    categoryList.empty()
+    const categoryName = $(this).data("name") || "cloth"
+    console.log(this)
+    selectMenuOption.selected = this
+    populateCategoryList(categoryName)
+})
+
+// ---------------------------------------- tablet & mobile sidebar -------------------------------------------
+const mbMenuOptions = $(".sidebar__menu-item#menu-item")
+const mbCategoryList = $("#mb-category-list")
+
+$(".sidebar-btn").on("click", function () {
+    $("body").addClass("sidebar-open")
+    $(".sidebar").addClass("open")
+})
+
+$("#sidebar-close-btn").on("click", function () {
+    $("body").removeClass("sidebar-open")
+    $(".sidebar").removeClass("open")
+})
+
+$(".layer").on("click", function () {
+    $("body").removeClass("sidebar-open")
+    $(".sidebar").removeClass("open")
+})
+
+// for (option of mbMenuOptions) {
+    mbMenuOptions.on("click", function () {
+        console.log("hello")
+        const categoryName = $(this).data("name") || "cloth"
+        $("#mb-category-menu").addClass("hid")
+        const backToMenuBtn = $("<div>").text("بازگشت").addClass("sidebar__cat-btn")
+        const lists = $("<div>")
+        mbCategoryList.append(lists)
+        lists.append(backToMenuBtn)
+        backToMenuBtn.on("click", function () {
+            lists.empty()
+            $("#mb-category-menu").removeClass("hid")
+        })
+        const listHeader = $("<div>")
+            .text(catToFullNameMap[categoryName])
+            .addClass("py-4 text-primary")
+        lists.append(listHeader)
+        $.each(CATEGORIES[categoryName], function (_, category) {
+            const listItem = $("<li>").text(category).addClass("sidebar__cat-list")
+            lists.append(listItem)
+        })
+    })
+// }
+
+// $('.sidbar__menu-item#menu-item').on('click', function(){
+//     console.log(this)
+// })

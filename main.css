@@ -1,37 +1,40 @@
 /* --------------------------------- Header -------------------------------- */
-.header {
+body.sidebar-open {
+    overflow: hidden;
+}
+
+body.sidebar-open .layer {
+    display: block;
+    position: absolute;
+    height: 200vh;
+    z-index: 1;
+    inset: 0;
+    animation: appear 300ms forwards;
+    background-color: rgba(0, 0, 0, 0.94);
+}
+
+#lg-nav .nav-icon.icon {
+    width: var(--lg-icon-size);
+}
+
+.md-nav,
+.lg-nav {
     min-height: 103px;
 }
 
-.header__phone {
-    cursor: pointer;
-    align-items: center;
-}
-
-.header__secondary-nav {
-    list-style: none;
-}
-
-.header__secondary-nav li {
-    cursor: pointer;
-}
-
-.header__logo {
+.cart-count {
+    background-color: var(--bg-primary);
+    border-radius: 999px;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -5px;
+    right: -8px;
     display: flex;
     justify-content: center;
-}
-
-.header__primary-nav {
     align-items: center;
-    justify-content: end;
-}
-
-.header__primary-nav > ul li {
-    cursor: pointer;
-}
-
-.header__primary-nav > ul li:hover {
-    filter: var(--filter-to-primary);
+    font-size: var(--text-xs);
+    color: var(--bg-secondary);
 }
 
 .header__search .dropdown-menu {
@@ -40,7 +43,6 @@
     width: 330px;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     padding: 10px 16px;
-    animation: appear 600ms forwards;
 }
 
 .header__search .dropdown-menu .dropdown-menu__content {
@@ -95,14 +97,23 @@
     outline: none;
 }
 
-.header__cat-menu {
+/* desktop category menu */
+.header__cat-menu-btn {
     padding: var(--button-secondary-py) var(--button-secondary-px);
-    cursor: pointer;
     display: flex;
+
     align-items: center;
     gap: 2px;
     border: 1px solid var(--text-primary);
     border-radius: 8px;
+}
+
+.header__cat-menu-btn:hover {
+    color: #fff;
+    background-color: var(--bg-primary);
+}
+.header__cat-menu-btn:hover img {
+    filter: grayscale(1) brightness(200%);
 }
 
 .dropdown-menu {
@@ -110,11 +121,7 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     background-color: var(--bg-default);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-}
-
-.cat-menu {
-    display: flex;
-    padding: 24px;
+    animation: appear 600ms forwards;
 }
 
 .cat-menu__items {
@@ -174,15 +181,218 @@
 .cat-menu-options__list ul li {
     list-style: disc;
     list-style-position: inside;
-    cursor: pointer;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .cat-menu-options__list ul li:hover {
     color: var(--text-primary);
 }
 
+/* --------------------------------------------------- md styles --------------------------------------- */
+#md-nav .icon-nav.icon {
+    width: var(--sm-icon-size);
+    height: var(--sm-icon-size);
+}
 
+#md-nav .header__logo img {
+    width: 75px;
+    height: 75px;
+}
+
+@media (max-width: 570px){
+    #md-nav .header__logo img {
+        width: 75px;
+        height: auto;
+    }
+}
+
+#md-nav img {
+    width: var(--sm-icon-size);
+    height: var(--sm-icon-size);
+}
+
+/* different screens */
+
+#lg-nav {
+    display: none;
+}
+
+@media (min-width: 860px) {
+    #lg-nav {
+        display: flex;
+    }
+    #md-nav {
+        display: none;
+    }
+
+    .cart-count {
+        width: 22px;
+        height: 22px;
+        top: -10px;
+        right: -10px;
+    }
+}
+
+@media (max-width: 460px){
+    .mobile-hide {
+        display: none;
+    }
+}
+
+
+.sidebar {
+    width: 0;
+    direction: rtl;
+    visibility: hidden;
+    right: 0;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    background-color: var(--bg-default);
+    z-index: 2;
+    transition: all 300ms ease-in;
+    padding: 16px;
+    overflow-x: hidden;
+}
+
+
+.sidebar #mb-category-list {
+    display: block;
+    width: max-content;
+    min-width: 270px;
+}
+
+.mb-category-menu {
+    background-color: red;
+    width: 100%;
+}
+
+.sidebar.open {
+    width: 42vw;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media (max-width: 670px) {
+    .sidebar.open {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 490px) {
+    .sidebar.open {
+        width: 75vw;
+    }
+}
+
+
+.sidebar__btn {
+    border: 1px solid #dfd2d2;
+    padding: 8px;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--text-sm);
+    cursor: pointer;
+}
+
+.sidebar__btn:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.sidebar__btn:hover img {
+    filter: var(--filter-to-primary);
+}
+
+.sidebar__cat-btn {
+    padding: 8px;
+    border-bottom: 1px solid #dfd2d2;
+    font-weight: 500;
+    color: #242424;
+    cursor: pointer;
+}
+
+.sidebar__cat-btn:hover {
+    color: var(--text-primary);
+}
+
+.sidebar__menu-cat {
+    padding: 22px 6px;
+    color: var(--text-default);
+    font-size: var(--text-sm);
+}
+
+.sidebar__menu-cat ul {
+    padding: 0;
+}
+
+.sidebar__menu-item {
+    display: flex;
+    padding-block: 16px;
+    justify-content: space-between;
+}
+
+.sidebar__menu-item:not(:last-child) {
+    border-bottom: 1px solid #dfd2d2;
+}
+
+.sidebar__cat-list {
+    color: #838383;
+    font-weight: 100;
+    padding-block: 8px;
+}
+
+.sidebar__cat-list:hover {
+    color: var(--text-primary);
+}
+
+#mb-category-menu.hid {
+    display: none;
+}
+/* -------------------------app bar------------------------------------------------ */
+.app-bar {
+    display: block;
+    width: 100vw;
+    position: fixed;
+    height: 78px;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+@media(min-width: 460px) {
+    .app-bar {
+        display: none;
+    }
+}
+
+.app-bar__basket {
+    position: absolute;
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    top: 0px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999%;
+    border: var(--bg-default) solid 10px;
+}
+
+.app-bar .icon {
+    filter: var(--filter-to-primary);
+}
+
+/* ----------------------------------------------------------- main --------------------------------------- */
+/* ----------------------------------- hero ----------------------------- */
+
+/* animations */
 @keyframes appear {
     0% {
         opacity: 0;

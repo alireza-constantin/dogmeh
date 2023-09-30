@@ -20,8 +20,8 @@
     --text-2xl: 40px;
 
     /* utils */
-    --border-radius: 8px;
-    --border-radius-sm: 16px;
+    --border-radius: 16px;
+    --border-radius-sm: 8px;
     --filter-to-primary: invert(54%) sepia(16%) saturate(2033%) hue-rotate(133deg)
         brightness(98%) contrast(83%);
 
@@ -178,6 +178,10 @@ img {
     max-width: 100%;
 }
 
+main {
+    padding-bottom: 90px;
+}
+
 /* utils */
 .text-default {
     color: var(--text-default);
@@ -189,6 +193,18 @@ img {
 
 .text-primary {
     color: var(--text-primary);
+}
+
+.pointer > * {
+    cursor: pointer;
+}
+
+.text-hover:hover {
+    color: var(--text-primary);
+}
+
+img.icon-hover:hover {
+    filter: var(--filter-to-primary);
 }
 
 .text-secondary {
@@ -223,10 +239,6 @@ img {
     background-color: var(--bg-default);
 }
 
-.flex {
-    display: flex;
-}
-
 .gap-2 {
     gap: 4px;
 }
@@ -241,11 +253,6 @@ img {
 
 .hover-primary:hover {
     color: var(--text-primary);
-}
-
-.hover-primary-svg:hover {
-    filter: invert(54%) sepia(16%) saturate(2033%) hue-rotate(133deg) brightness(98%)
-        contrast(83%);
 }
 
 body {
