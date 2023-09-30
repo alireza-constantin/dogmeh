@@ -292,7 +292,7 @@ body.sidebar-open .layer {
 
 @media (max-width: 380px) {
     .sidebar.open {
-        width: 90vw;
+        width: 85vw;
     }
 }
 
