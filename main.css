@@ -290,6 +290,12 @@ body.sidebar-open .layer {
     }
 }
 
+@media (max-width: 380px) {
+    .sidebar.open {
+        width: 90vw;
+    }
+}
+
 
 .sidebar__btn {
     border: 1px solid #dfd2d2;
