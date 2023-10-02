@@ -402,7 +402,7 @@
         </header>
         <main>
             <!------------------------------------------------------- hero ---------------------------------------->
-            <div class="hero position-absoulute">
+            <section class="hero position-absoulute">
                 <div class="hero__carousel">
                     <div class="carousel__item position-relative">
                         <img src="./assets/Bg1.png" />
@@ -417,45 +417,364 @@
                             <div class="button mt-5">مشاهده محصولات</div>
                         </div>
                     </div>
-                        <div class="carousel__actions mt-2">
-                            <div class="carousel__actions__nav">
-                                <img class="pr-2" src="./assets/fi_arrow-left.svg" />
-                                <img src="./assets/fi_arrow-right.svg" />
+                    <div class="carousel__actions mt-2">
+                        <div class="carousel__actions__nav">
+                            <img class="pr-2" src="./assets/fi_arrow-left.svg" />
+                            <img src="./assets/fi_arrow-right.svg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--------------------------------------------------------- sale --------------------------------------->
+            <section class="sale mt-5">
+                <div
+                    class="sale__header d-flex justify-content-center align-items-center gap-8"
+                >
+                    <div class="sale__header-line">
+                        <span class="line"></span>
+                        <span class="dot ml-1"></span>
+                    </div>
+                    <h4 class="text-xl font-extra text-accent">فروش ویژه</h4>
+                    <div class="sale__header-line">
+                        <span class="dot mr-1"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="sale__slide position-relative mt-4">
+                    <div class="slide">
+                        <div class="slide-action">
+                            <div id="slide-left">
+                                <img src="./assets/chevron-left.svg" />
+                            </div>
+                            <div id="slide-right">
+                                <img src="./assets/chevron-left.svg" />
+                            </div>
+                        </div>
+                        <div class="slide-container">
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <div dir="rtl" class="product-card">
+                                    <p class="product-card__sale-percent">۲۰٪</p>
+                                    <div>
+                                        <img src="./assets/vigeh1.png" />
+                                    </div>
+                                    <div class="product-card__fav">
+                                        <img src="./assets/fi_heart.svg" />
+                                    </div>
+                                    <p class="text-accent text-right py-4">نام محصول</p>
+                                    <div
+                                        class="product-card__actions d-flex justify-content-between align-items-center"
+                                    >
+                                        <div class="icon four-dot">
+                                            <img src="./assets/Group.svg" />
+                                        </div>
+                                        <div class="icon three-dot">
+                                            <img src="./assets/Group-3dot.svg" />
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-4"
+                                        >
+                                            <p class="text-sm product-card__sale-price">
+                                                ۳.۹۲۰.۰۰۰
+                                            </p>
+                                            <p class="product-card__price">
+                                                ۴.۲۴۲.۰۰۰ <span>تومان</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pt-5">
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-                <p>test scroll</p>
-            </div>
+            </section>
         </main>
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

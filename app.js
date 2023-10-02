@@ -45,7 +45,7 @@ const catToFullNameMap = {
 const options = $(".cat-menu__item")
 const categoryList = $("#category-list")
 
-console.log(options);
+console.log(options)
 
 const selectMenuOption = new Proxy(
     {
@@ -106,29 +106,43 @@ $(".layer").on("click", function () {
 })
 
 // for (option of mbMenuOptions) {
-    mbMenuOptions.on("click", function () {
-        console.log("hello")
-        const categoryName = $(this).data("name") || "cloth"
-        $("#mb-category-menu").addClass("hid")
-        const backToMenuBtn = $("<div>").text("بازگشت").addClass("sidebar__cat-btn")
-        const lists = $("<div>")
-        mbCategoryList.append(lists)
-        lists.append(backToMenuBtn)
-        backToMenuBtn.on("click", function () {
-            lists.empty()
-            $("#mb-category-menu").removeClass("hid")
-        })
-        const listHeader = $("<div>")
-            .text(catToFullNameMap[categoryName])
-            .addClass("py-4 text-primary")
-        lists.append(listHeader)
-        $.each(CATEGORIES[categoryName], function (_, category) {
-            const listItem = $("<li>").text(category).addClass("sidebar__cat-list")
-            lists.append(listItem)
-        })
+mbMenuOptions.on("click", function () {
+    console.log("hello")
+    const categoryName = $(this).data("name") || "cloth"
+    $("#mb-category-menu").addClass("hid")
+    const backToMenuBtn = $("<div>").text("بازگشت").addClass("sidebar__cat-btn")
+    const lists = $("<div>")
+    mbCategoryList.append(lists)
+    lists.append(backToMenuBtn)
+    backToMenuBtn.on("click", function () {
+        lists.empty()
+        $("#mb-category-menu").removeClass("hid")
     })
-// }
+    const listHeader = $("<div>")
+        .text(catToFullNameMap[categoryName])
+        .addClass("py-4 text-primary")
+    lists.append(listHeader)
+    $.each(CATEGORIES[categoryName], function (_, category) {
+        const listItem = $("<li>").text(category).addClass("sidebar__cat-list")
+        lists.append(listItem)
+    })
+})
+const slideContainer = $(".slide-container")
+$("#slide-right").on("click", function () {
+    console.log(slideContainer[0]);
 
-// $('.sidbar__menu-item#menu-item').on('click', function(){
-//     console.log(this)
-// })
+    slideContainer[0].scrollBy({
+        left: 200,
+        behavior: "smooth"
+    })
+})
+
+$("#slide-left").on("click", function () {
+    console.log(slideContainer[0])
+
+    slideContainer[0].scrollBy({
+        left: -200,
+        behavior: "smooth",
+    })
+})
+

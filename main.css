@@ -1,3 +1,95 @@
+.product-card {
+    width: max-content;
+    padding: 16px;
+    box-shadow: var(--box-shadow-blog);
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.product-card:hover {
+    box-shadow:  0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.product-card .product-card__sale-percent {
+    display: none;
+}
+
+.product-card.sale .product-card__sale-percent {
+    position: absolute;
+    display: inline-block;
+    top: 30px;
+    left: 30px;
+    vertical-align: middle;
+    font-size: var(--text-sm);
+    padding-inline: 6px;
+    padding-block: 4px;
+    background-color: var(--bg-primary);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.product-card__actions .icon {
+    background-color: var(--bg-primary);
+    height: 38px;
+    width: 38px;
+    border-radius: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card:hover .product-card__fav {
+    display: inline-block;
+}
+
+.product-card .product-card__fav {
+    display: none;
+    position: absolute;
+    padding: 6px;
+    top: 30px;
+    right: 30px;
+    background-color: #fff;
+    border-radius: 99%;
+    animation: appear 400ms forwards;
+    cursor: pointer;
+}
+
+
+.product-card .product-card__fav img {
+    width: 24px;
+    height: 24px;
+    filter: var(--filter-to-primary);
+}
+
+.product-card:hover .product-card__actions .four-dot {
+    display: none;
+}
+
+.product-card .product-card__actions .three-dot {
+    display: none;
+    
+}
+
+.product-card:hover .product-card__actions .three-dot {
+    display: flex;
+}
+
+.product-card.sale .product-card__price {
+    text-decoration: line-through;
+    text-decoration-color: var(--text-default);
+    text-decoration-thickness: 2px;
+}
+
+.product-card.sale .product-card__sale-price {
+    display: block;
+    color: #b1b1b1;
+}
+
+.product-card__sale-price {
+    display: none;
+    color: #b1b1b1;
+}
+
 /* --------------------------------- Header -------------------------------- */
 body.sidebar-open {
     overflow: hidden;
@@ -493,7 +585,6 @@ body.sidebar-open .layer {
 
 @media (max-width: 520px) {
     .hero {
-        position: absolute;
         inset-inline: 0;
     }
     .hero__overlay {
@@ -515,12 +606,96 @@ body.sidebar-open .layer {
     }
 }
 
-/* @media (max-width: 900px) {
-    .hero > img {
-        height: 495px;
-        object-position: bottom center;
+/* ----------------------------------------------- Sale ------------------------------------------------- */
+.sale__header {
+    text-align: center;
+}
+
+.sale__header-line .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-primary);
+    border-radius: 99%;
+}
+
+.sale__header-line .line {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 4px;
+    
+    border-radius: 2px;
+    background-color: var(--text-primary);
+}
+
+
+/* -------------------------------------------------------------- slide ------------------------------------ */
+.slide-container {
+    display: flex;
+    position: relative;
+    gap: 16px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.slide-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slide-action #slide-left, 
+.slide-action #slide-right {
+    background-color: #fff;
+    width: 28px;
+    height: 28px;
+    top: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 99%;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+#slide-left:hover,
+#slide-right:hover {
+    background-color: var(--bg-primary);
+}
+
+#slide-left:hover > img,
+#slide-right:hover > img {
+    filter: invert(100%);
+}
+
+.slide-action img {
+    width: 22px;
+    height: 22px;
+    filter: var(--filter-to-primary);
+}
+
+.slide-action #slide-left {
+    left: 0px;
+}
+
+.slide-action #slide-right {
+    right: -10px;
+}
+
+
+.slide-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+@media(max-width: 520px){
+    .sale__header-line:has(.dot, .line){
+        display: none;
     }
-} */
+
+}
+
+
 
 /* animations */
 @keyframes appear {
