@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "Yekan Bakh";
+    src: url("./assets/YekanBakh-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Yekan Bakh";
+    src: url("./assets/YekanBakh-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Yekan Bakh";
+    src: url("./assets/YekanBakh-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
 :root {
     /* background colors */
     --bg-default: #f6f6f6;
@@ -17,7 +38,7 @@
     --text-md: 16px;
     --text-lg: 18px;
     --text-xl: 32px;
-    --text-2xl: 40px;
+    --text-2xl: 38px;
 
     /* utils */
     --border-radius: 16px;
@@ -174,15 +195,23 @@ table {
     border-spacing: 0;
 }
 
-img {
+/* img {
     max-width: 100%;
-}
+} */
 
 main {
     padding-bottom: 90px;
 }
 
 /* utils */
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extra {
+    font-weight: 900;
+}
+
 .text-default {
     color: var(--text-default);
 }
@@ -257,4 +286,6 @@ img.icon-hover:hover {
 
 body {
     max-width: 1360px;
+    font-family: "Yekan Bakh";
+    font-weight: 600;
 }
