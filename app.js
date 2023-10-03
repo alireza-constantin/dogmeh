@@ -127,9 +127,9 @@ mbMenuOptions.on("click", function () {
         lists.append(listItem)
     })
 })
-const slideContainer = $(".slide-container")
+const slideContainer = $(".slide-container");
+const suggestSlideContainer = $(".suggest__slide-container")
 $("#slide-right").on("click", function () {
-    console.log(slideContainer[0]);
 
     slideContainer[0].scrollBy({
         left: 200,
@@ -138,11 +138,22 @@ $("#slide-right").on("click", function () {
 })
 
 $("#slide-left").on("click", function () {
-    console.log(slideContainer[0])
-
     slideContainer[0].scrollBy({
         left: -200,
         behavior: "smooth",
     })
 })
 
+$(".suggest__slide #slide-right").on("click", function () {
+    suggestSlideContainer[0].scrollBy({
+        left: 100,
+        behavior: "smooth",
+    })
+})
+
+$(".suggest__slide #slide-left").on("click", function () {
+    suggestSlideContainer[0].scrollBy({
+        left: -100,
+        behavior: "smooth",
+    })
+})

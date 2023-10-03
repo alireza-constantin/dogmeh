@@ -7,7 +7,7 @@
 }
 
 .product-card:hover {
-    box-shadow:  0 4px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .product-card .product-card__sale-percent {
@@ -54,7 +54,6 @@
     cursor: pointer;
 }
 
-
 .product-card .product-card__fav img {
     width: 24px;
     height: 24px;
@@ -67,7 +66,6 @@
 
 .product-card .product-card__actions .three-dot {
     display: none;
-    
 }
 
 .product-card:hover .product-card__actions .three-dot {
@@ -542,6 +540,15 @@ body.sidebar-open .layer {
     cursor: pointer;
 }
 
+.button.primary {
+    color: var(--bg-primary);
+    border-color: var(--bg-primary);
+}
+
+.button.primary::after {
+    background-color: #cef0e8;
+}
+
 .button::after {
     content: "";
     position: absolute;
@@ -602,7 +609,7 @@ body.sidebar-open .layer {
 
     .hero .carousel__item > img {
         height: 495px;
-        object-position: 60% ;
+        object-position: 60%;
     }
 }
 
@@ -624,11 +631,10 @@ body.sidebar-open .layer {
     vertical-align: middle;
     width: 100px;
     height: 4px;
-    
+
     border-radius: 2px;
     background-color: var(--text-primary);
 }
-
 
 /* -------------------------------------------------------------- slide ------------------------------------ */
 .slide-container {
@@ -642,7 +648,7 @@ body.sidebar-open .layer {
     display: none;
 }
 
-.slide-action #slide-left, 
+.slide-action #slide-left,
 .slide-action #slide-right {
     background-color: #fff;
     width: 28px;
@@ -680,22 +686,149 @@ body.sidebar-open .layer {
 
 .slide-action #slide-right {
     right: -10px;
+    transform: rotate(180deg);
 }
-
 
 .slide-item {
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
 
-@media(max-width: 520px){
-    .sale__header-line:has(.dot, .line){
+@media (max-width: 520px) {
+    .sale__header-line:has(.dot, .line) {
         display: none;
     }
-
 }
 
+/*----------------------------------------------- suggest -----------------------------------------------------*/
+.suggest__desc {
+    max-width: 375px;
+}
 
+.suggest__desc p:first-child {
+    font-size: 28px;
+}
+
+.suggest__desc p {
+    line-height: 32px;
+}
+
+.suggest__hero-pic img {
+    max-width: 100%;
+}
+
+.suggest__slide {
+    position: absolute;
+    top: 75%;
+    right: 7%;
+    z-index: 3;
+    width: max-content;
+}
+
+.suggest__slide-container {
+    max-width: fit-content;
+    display: flex;
+    gap: 16px;
+}
+
+.suggest__slide .slide-action #slide-right,
+.suggest__slide .slide-action #slide-left {
+    background-color: #e1f3ef;
+}
+
+.suggest__slide .slide-action #slide-right img,
+.suggest__slide .slide-action #slide-left img {
+    filter: var(--filter-to-primary);
+}
+
+@media (max-width: 990px) {
+    .suggest__slide-container {
+        max-width: 640px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .suggest__slide-container .product-card {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    .suggest__slide-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .suggest__slide {
+        right: 25%;
+    }
+
+    .suggest__slide .slide-action #slide-right {
+        right: -20%;
+    }
+
+    .suggest__slide .slide-action #slide-left {
+        left: -20%;
+    }
+
+    .suggest__slide-container {
+        max-width: 320px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .suggest__slide-container .product-card {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    .suggest__slide-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 610px) {
+    .suggest__slide {
+        right: 17.5%;
+    }
+}
+
+@media (max-width: 520px) {
+    .suggest__slide-container {
+        max-width: 275px;
+    }
+
+    .suggest__slide-container .product-card__pic {
+        width: 235px;
+    }
+}
+
+@media (max-width: 450px) {
+    .suggest__slide {
+        right: 15%;
+    }
+    .suggest__slide-container {
+        max-width: 245px;
+    }
+
+    .suggest__slide-container .product-card__pic {
+        width: 215px;
+    }
+}
+
+@media (max-width: 450px) {
+    .suggest__slide-container {
+        max-width: 225px;
+    }
+
+    .suggest__slide-container .product-card__pic {
+        width: 190px;
+    }
+}
+
+.suggest__slide .product-card {
+    background-color: #fff;
+}
 
 /* animations */
 @keyframes appear {
