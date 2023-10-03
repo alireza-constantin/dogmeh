@@ -128,7 +128,8 @@ mbMenuOptions.on("click", function () {
     })
 })
 const slideContainer = $(".slide-container");
-const suggestSlideContainer = $(".suggest__slide-container")
+const suggestSlideContainer = $(".suggest__slide-container");
+const newSlideContainer = $(".new__slide .slide-container");
 $("#slide-right").on("click", function () {
 
     slideContainer[0].scrollBy({
@@ -157,3 +158,18 @@ $(".suggest__slide #slide-left").on("click", function () {
         behavior: "smooth",
     })
 })
+
+$(".new__slide #slide-right").on("click", function () {
+    newSlideContainer[0].scrollBy({
+        left: 100,
+        behavior: "smooth",
+    })
+})
+
+$(".new__slide #slide-left").on("click", function () {
+    newSlideContainer[0].scrollBy({
+        left: -100,
+        behavior: "smooth",
+    })
+})
+

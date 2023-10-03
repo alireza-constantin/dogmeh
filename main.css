@@ -830,6 +830,11 @@ body.sidebar-open .layer {
     background-color: #fff;
 }
 
+/* --------------------------------------------------- New -------------------------------------------------- */
+.new {
+    margin-top: clamp(1vw, 420px, 80vw);
+}
+
 /* animations */
 @keyframes appear {
     0% {
