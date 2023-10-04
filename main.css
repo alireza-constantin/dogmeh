@@ -844,7 +844,7 @@ body.sidebar-open .layer {
         max-width: 600px;
         margin-inline: auto;
     }
-    
+
     .category__item-content {
         position: absolute;
         background: #fff;
@@ -865,6 +865,37 @@ body.sidebar-open .layer {
         left: 0;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+/* ------------------------------ zemanat ----------------------------------------------- */
+
+.zemanat .slide-action #slide-right,
+.zemanat .slide-action #slide-left {
+    background-color: #e1f3ef;
+}
+
+.zemanat .slide-action #slide-right img,
+.zemanat .slide-action #slide-left img {
+    filter: var(--filter-to-primary);
+}
+
+
+.zemanat__card {
+    background-color: #fff;
+    width: 318px;
+    height: 134px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    color: #005C6D;
+}
+
+@media (max-width: 768px) {
+    .zemanat .slide-item {
+        flex: 0 0 100%;
     }
 }
 

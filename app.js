@@ -130,6 +130,8 @@ mbMenuOptions.on("click", function () {
 const slideContainer = $(".slide-container");
 const suggestSlideContainer = $(".suggest__slide-container");
 const newSlideContainer = $(".new__slide .slide-container");
+const zemanatSliderContainer = $(".zemanat .slide-container");
+
 $("#slide-right").on("click", function () {
 
     slideContainer[0].scrollBy({
@@ -173,3 +175,19 @@ $(".new__slide #slide-left").on("click", function () {
     })
 })
 
+$(".zemanat #slide-right").on("click", function () {
+    console.log(zemanatSliderContainer)
+    
+    zemanatSliderContainer[0].scrollBy({
+        left: zemanatSliderContainer[0].clientWidth,
+        behavior: "smooth",
+    })
+})
+
+$(".zemanat #slide-left").on("click", function () {
+    console.log(zemanatSliderContainer[0].clientWidth)
+    zemanatSliderContainer[0].scrollBy({
+        left: -zemanatSliderContainer[0].clientWidth,
+        behavior: "smooth",
+    })
+})
