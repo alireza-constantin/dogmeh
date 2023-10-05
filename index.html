@@ -20,11 +20,11 @@
 
         <title>DOGMEH</title>
     </head>
-    <body class="container-fluid bg-default text-default">
+    <body class="bg-default text-default">
         <div class="layer"></div>
         <!----------------------------------------------------------- HEADER -------------------------------------->
 
-        <header class="header">
+        <header class="header container-fluid">
             <!---------------------------------------------------- Desktop nav ------------------------------------>
             <div id="lg-nav" class="lg-nav row align-items-center">
                 <!------------------------------------------------ secondary nav ---------------------------------->
@@ -426,7 +426,7 @@
                 </div>
             </section>
             <!--------------------------------------------------------- sale --------------------------------------->
-            <section class="sale mt-5">
+            <section class="sale container-fluid mt-5">
                 <div
                     class="sale__header d-flex justify-content-center align-items-center gap-8"
                 >
@@ -776,7 +776,7 @@
                 </div>
             </section>
             <!-------------------------------------------------- suggest ----------------------------------------->
-            <section dir="rtl" class="suggest mt-5 position-relative">
+            <section dir="rtl" class="suggest container-fluid mt-5 position-relative">
                 <div
                     class="d-flex flex-column flex-lg-row gap-8 justify-content-around align-items-center"
                 >
@@ -917,7 +917,7 @@
                 </div>
             </section>
             <!---------------------------------------- New -------------------------------------------------->
-            <section class="new">
+            <section class="new container-fluid">
                 <div
                     class="sale__header d-flex justify-content-center align-items-center gap-8"
                 >
@@ -1142,7 +1142,7 @@
                 </div>
             </section>
             <!--------------------------------------- category ---------------------------------------------------->
-            <section class="category mt-5">
+            <section class="category container-fluid mt-5">
                 <div
                     class="sale__header d-flex justify-content-center align-items-center gap-8"
                 >
@@ -1157,7 +1157,7 @@
                     </div>
                 </div>
                 <div
-                    class="category__items d-flex flex-column flex-xl-row justify-content-center gap-8 mt-3"
+                    class="category__items d-flex flex-column flex-xl-row justify-content-center gap-8 mt-4"
                 >
                     <div class="category__item position-relative align-self-lg-center">
                         <img src="./assets/cat_accessori.png" />
@@ -1185,7 +1185,7 @@
                 </div>
             </section>
             <!---------------------------------------- zemanat ------------------------------------------------>
-            <section class="zemanat mt-5">
+            <section class="zemanat container-fluid mt-5">
                 <div class="new__slide position-relative mt-4">
                     <div class="slide">
                         <div class="slide-action d-block d-lg-none">
@@ -1220,7 +1220,40 @@
                 </div>
             </section>
         </main>
-
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__logo"><img src="./assets/logo.png" /></div>
+                <div class="footer__socials">
+                    <div class="footer__social">
+                        <img src="./assets/namad.png" />
+                    </div>
+                    <div class="footer__social">
+                        <img src="./assets/Layer.svg" />
+                    </div>
+                    <div class="footer__social">
+                        <img src="./assets/telegram.svg" />
+                    </div>
+                    <div class="footer__social">
+                        <img src="./assets/instagram.svg" />
+                    </div>
+                    <div class="footer__social">
+                        <img src="./assets/phone-primary.svg" />
+                    </div>
+                </div>
+                <div class="footer__nav mt-5">
+                    <ul>
+                        <li>صفحه اصلی</li>
+                        <li>محصولات</li>
+                        <li>مقالات</li>
+                        <li>درباره‌ما</li>
+                        <li>تماس باما</li>
+                    </ul>
+                </div>
+                <div class="footer__copyright">
+                    <p class="text-sm">طراحی شده توسط وبکده</p>
+                </div>
+            </div>
+        </footer>
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script
             src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
