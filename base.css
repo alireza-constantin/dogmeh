@@ -284,8 +284,16 @@ img.icon-hover:hover {
     color: var(--text-primary);
 }
 
+@media(max-width: 420px){
+    .xs-hide {
+        display: none !important;
+    }
+}
+
+
 body {
-    max-width: 1360px;
+    max-width: 1480px;
+    margin-inline: auto;
     font-family: "Yekan Bakh";
     font-weight: 600;
 }

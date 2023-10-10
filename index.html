@@ -15,6 +15,7 @@
             integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="slick/slick.css" />
         <link rel="stylesheet" href="./base.css" />
         <link rel="stylesheet" href="./main.css" />
 
@@ -402,26 +403,39 @@
         </header>
         <main>
             <!------------------------------------------------------- hero ---------------------------------------->
-            <section class="hero position-absoulute">
-                <div class="hero__carousel">
-                    <div class="carousel__item position-relative">
-                        <img src="./assets/Bg1.png" />
-                        <div dir="rtl" class="hero__overlay">
-                            <h2 class="text-2xl font-extra">
-                                دگمه‌‌‌، فروشگاه آنلاین خرید پوشاک و اکسسوری
-                            </h2>
-                            <div class="d-flex gap-4 align-items-center mt-2">
-                                <span class="line"></span>
-                                <p class="text-lg">دگمه رنگ ها را هدیه می‌دهد</p>
+            <section class="hero container">
+                <div class="hero__carousel position-relative">
+                    <div class="hero__slide">
+                        <div class="carousel__item position-relative">
+                            <img src="./assets/Bg1.png" />
+                            <div dir="rtl" class="hero__overlay">
+                                <h2 class="text-2xl font-extra">
+                                    دگمه‌‌‌، فروشگاه آنلاین خرید پوشاک و اکسسوری
+                                </h2>
+                                <div class="d-flex gap-4 align-items-center mt-2">
+                                    <span class="line"></span>
+                                    <p class="text-lg">دگمه رنگ ها را هدیه می‌دهد</p>
+                                </div>
+                                <div class="button mt-5">مشاهده محصولات</div>
                             </div>
-                            <div class="button mt-5">مشاهده محصولات</div>
+                        </div>
+                        <div class="carousel__item position-relative">
+                            <img src="./assets/Bg1.png" />
+                            <div dir="rtl" class="hero__overlay">
+                                <h2 class="text-2xl font-extra">
+                                    دگمه‌‌‌، فروشگاه آنلاین خرید پوشاک و اکسسوری
+                                </h2>
+                                <div class="d-flex gap-4 align-items-center mt-2">
+                                    <span class="line"></span>
+                                    <p class="text-lg">دگمه رنگ ها را هدیه می‌دهد</p>
+                                </div>
+                                <div class="button mt-5">مشاهده محصولات</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel__actions mt-2">
-                        <div class="carousel__actions__nav">
-                            <img class="pr-2" src="./assets/fi_arrow-left.svg" />
-                            <img src="./assets/fi_arrow-right.svg" />
-                        </div>
+                    <div class="slide-action__wrapper">
+                        <div class="slide-action-arrow"></div>
+                        <div class="slide-action-dot"></div>
                     </div>
                 </div>
             </section>
@@ -1236,13 +1250,13 @@
                     <div class="footer__social">
                         <img src="./assets/instagram.svg" />
                     </div>
-                    <div class="footer__social">
+                    <div class="footer__social xs-hide">
                         <img src="./assets/phone-primary.svg" />
                     </div>
                 </div>
                 <div class="footer__nav mt-5">
                     <ul>
-                        <li>صفحه اصلی</li>
+                        <li class="xs-hide">صفحه اصلی</li>
                         <li>محصولات</li>
                         <li>مقالات</li>
                         <li>درباره‌ما</li>
@@ -1265,6 +1279,7 @@
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
             crossorigin="anonymous"
         ></script>
+        <script src="slick/slick.min.js"></script>
         <script src="./app.js"></script>
     </body>
 </html>

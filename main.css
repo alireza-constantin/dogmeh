@@ -1,3 +1,42 @@
+.slide-action__wrapper {
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+}
+
+.hero .slick-dots {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.hero .slick-dots li {
+    line-height: 0;
+    display: inline-block;
+}
+
+.hero .slick-dots li button {
+    font-size: 0;
+    vertical-align: baseline;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: #838383;
+    height: 2px;
+    width: 10px;
+    border-radius: 20px;
+    transition: 0.5s ease-out;
+}
+
+.hero .slick-dots li.slick-active button {
+    width: 27px;
+    height: 3px;
+    background-color: #242424;
+}
+
+
 .product-card {
     width: max-content;
     padding: 16px;
@@ -877,12 +916,12 @@ body.sidebar-open .layer {
     .category__item-content.right {
         right: 0;
         top: 50%;
-        transform: translate(10%, -50%);
+        transform: translate(2%, -5%);
     }
     .category__item-content.left {
         left: 0;
         top: 50%;
-        transform: translate(-10%, -50%);
+        transform: translate(-2%, -5%);
     }
 }
 /* ------------------------------ zemanat ----------------------------------------------- */
@@ -916,7 +955,7 @@ body.sidebar-open .layer {
     }
 }
 
-/* -------------------------------------------- footer  -----------------------------*/
+/* -------------------------------------------- footer  ----------------------------------------------------*/
 .footer {
     background-color: #fff;
     border-radius: 15px;
@@ -996,6 +1035,16 @@ body.sidebar-open .layer {
 
     .footer__socials {
         gap: 16px;
+    }
+
+    .footer__social {
+        width: 54px;
+        height: 54px;
+    }
+
+    .footer__social img {
+        width: 24px;
+        height: 24px;
     }
 }
 

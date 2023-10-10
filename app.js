@@ -191,3 +191,11 @@ $(".zemanat #slide-left").on("click", function () {
         behavior: "smooth",
     })
 })
+
+$(".hero__slide").slick({
+    infinite: true,
+    slideToShow: 1,
+    dots: true,
+    appendArrows: $(".slide-action-arrow"),
+    appendDots: $(".slide-action-dot")
+})
